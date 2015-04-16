@@ -9,7 +9,7 @@ highlighter: pygments
 # so be sure to set them if your theme uses them.
 #
 title : 技术渣
-tagline: Site Tagline
+tagline: "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
 author :
   name : Zhe WANG
   email : zhew117@gmail.com
