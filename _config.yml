@@ -8,7 +8,7 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : 半仙杂谈
+title : 王半仙
 tagline: "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
 author :
   name : Zhe WANG
