@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Design Principles"
-description: ""
-category: 
+description: "Design Principles"
+category: "Code Design"
 tags: []
 ---
 {% include JB/setup %}
