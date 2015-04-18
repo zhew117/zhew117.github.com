@@ -13,7 +13,9 @@ tags: []
 Software design principles represent a set of guidelines that helps us to avoid having a bad design. The design principles are associated to Robert Martin who gathered them in "Agile Software Development: Principles, Patterns, and Practices". According to Robert Martin there are 3 important characteristics of a bad design that should be avoided:
 
 >Rigidity - It is hard to change because every change affects too many other parts of the system.
+
 >Fragility - When you make a change, unexpected parts of the system break.
+
 >Immobility - It is hard to reuse in another application because it cannot be disentangled from the current application.
 
 ###Open Close Principle
@@ -27,6 +29,7 @@ When referring to the classes Open Close Principle can be ensured by use of Abst
 ###Dependency Inversion Principle
 
 >High-level modules should not depend on low-level modules. Both should depend on abstractions.
+
 >Abstractions should not depend on details. Details should depend on abstractions.
 
 Dependency Inversion Principle states that we should decouple high level modules from low level modules, introducing an abstraction layer between the high level classes and low level classes. Further more it inverts the dependency: instead of writing our abstractions based on details, the we should write the details based on abstractions.
