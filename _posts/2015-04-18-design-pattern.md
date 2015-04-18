@@ -2,7 +2,7 @@
 layout: post
 title: "Design Pattern"
 description: "Design Pattern"
-category: Code Desgin
+category: Desgin
 tags: [Code,Design]
 ---
 {% include JB/setup %}
