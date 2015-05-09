@@ -24,18 +24,7 @@ or use gradle -q :appname:dependencies
 It will give you some info like this.
 
 
->+--- LOCAL: commons-codec-1.9.jar
-+--- LOCAL: universal-image-loader-1.8.6.jar
-+--- LOCAL: android-support-v4.jar
-+--- rosie_android:ViewPager:unspecified
-|    \--- LOCAL: android-support-v4.jar
-+--- rosie_android:stripe:unspecified
-|    +--- LOCAL: gson-2.2.4.jar
-|    \--- LOCAL: stripe-java-1.15.1.jar
-+--- :hangit_sdk:
-|    \--- LOCAL: android-async-http-1.4.6.jar
-\--- com.google.android.gms:play-services:6.5.87
-
+![](/assets/GradleInfo.jpeg)
 
 
 I have two android-support-v4.jar(s)
