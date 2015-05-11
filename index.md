@@ -18,6 +18,3 @@ tagline: Supporting tagline
 </h1>
 
 
-
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
