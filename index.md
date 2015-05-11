@@ -1,11 +1,9 @@
 ---
 layout: page
-title: PLAY
+title: 读万卷书，跑万里步。
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
-
-
 <h1>努力成为一个全栈开发人员 <br> 
 无比热爱计算机编码工作<br>
 熟悉Android应用开发<br>
@@ -18,3 +16,8 @@ tagline: Supporting tagline
 职人<br>
 帅
 </h1>
+
+
+
+{% assign posts_collate = site.posts %}
+{% include JB/posts_collate %}
