@@ -6,9 +6,8 @@ category:
 tags: []
 ---
 {% include JB/setup %}
-**“Chapter 1. Welcome to Software Construction”**
 
-Key Points
+**“Chapter 1. Welcome to Software Construction”**
 
 Software construction is the central activity in software development; construction is the only activity that's guaranteed to happen on every project.
 
@@ -23,7 +22,6 @@ In the final analysis, your understanding of how to do construction determines h
 
 **“Chapter 2. Metaphors for a Richer Understanding of Software Development”**
 
-“Key Points
 
 Metaphors are heuristics, not algorithms. As such, they tend to be a little sloppy.
 
@@ -36,4 +34,23 @@ Treating software construction as similar to building construction suggests that
 Thinking of software-development practices as tools in an intellectual toolbox suggests further that every programmer has many tools and that no single tool is right for every job. Choosing the right tool for each problem is one key to being an effective programmer.
 
 Metaphors are not mutually exclusive. Use the combination of metaphors that works best for you.”
+
+**“Chapter 3. Measure Twice, Cut Once: Upstream Prerequisites”**
+
+The overarching goal of preparing for construction is risk reduction. Be sure your preparation activities are reducing risks, not increasing them.
+
+If you want to develop high-quality software, attention to quality must be part of the software-development process from the beginning to the end. Attention to quality at the beginning has a greater influence on product quality than attention at the end.
+
+Part of a programmer's job is to educate bosses and coworkers about the software-development process, including the importance of adequate preparation before programming begins.
+
+The kind of project you're working on significantly affects construction prerequisites—many projects should be highly iterative, and some should be more sequential.
+
+If a good problem definition hasn't been specified, you might be solving the wrong problem during construction.
+“If good requirements work hasn't been done, you might have missed important details of the problem. Requirements changes cost 20 to 100 times as much in the stages following construction as they do earlier, so be sure the requirements are right before you start programming.
+
+
+If a good architectural design hasn't been done, you might be solving the right problem the wrong way during construction. The cost of architectural changes increases as more code is written for the wrong architecture, so be sure the architecture is right, too.
+
+Understand what approach has been taken to the construction prerequisites on your project, and choose your construction approach accordingly.”
+
 
