@@ -18,29 +18,29 @@ vagrant提供建立在行业标准技术顶部和控制的一个一致的工作�
 
 首先拿到虚拟机文件，
 
->>vagrant init
+>vagrant init
 
 然后
 
->>vagrant box add
+>vagrant box add
  
 然后
 
->> vgarant up
+> vgarant up
 
 虚拟机就启动起来了
 
 查看虚拟机状态
 
->> vagrant status 
+> vagrant status 
 
 链接到虚拟机
 
->>vagrant ssh
+>vagrant ssh
 
 或者
 
->>ssh vagrant@localhost -p 2222
+>ssh vagrant@localhost -p 2222
 
 链接上了之后就rails s，grunt launch什么的把服务器开起来就可以在“本地”跑了，
 
