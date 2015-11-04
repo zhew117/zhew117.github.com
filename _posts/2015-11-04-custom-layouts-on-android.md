@@ -8,6 +8,11 @@ tags: []
 {% include JB/setup %}
 
 ![](/assets/layouts-post.png)
+
+
+[##原文地址](http://lucasr.org/2014/05/12/custom-layouts-on-android/)
+
+
 If you ever built an Android app, you have definitely used some of the built-in layouts available in the platform—RelativeLayout, LinearLayout, FrameLayout, etc. They are our bread and butter for building Android UIs.
 
 如果你曾经做过Android开发，那么你肯定用过其平台当中的一些built—in布局－相对布局，线性布局，框架布局等等，他们是我们做Android UI的面包和奶油。
