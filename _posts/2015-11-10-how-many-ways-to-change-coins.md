@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "组合方式（换零钱方式的统计）"
+title: "组合方式（换零钱方式的统计）how many ways to change coins"
 description: ""
 category: 
 tags: []
