@@ -10,7 +10,7 @@ tags: []
 ![](/assets/layouts-post.png)
 
 
-[##原文地址](http://lucasr.org/2014/05/12/custom-layouts-on-android/)
+[  _**原文地址**_  ](http://lucasr.org/2014/05/12/custom-layouts-on-android/)
 
 
 If you ever built an Android app, you have definitely used some of the built-in layouts available in the platform—RelativeLayout, LinearLayout, FrameLayout, etc. They are our bread and butter for building Android UIs.
@@ -38,7 +38,7 @@ Ok, let’s start with the most common type of custom layout: composite view.
 
 好的，让我们开始最常见的一种自定义布局：composite view
 
-###Composite View
+### Composite View ###
 
 This is usually your starting point. Composite views (also known as compound views) are the easiest way of combining multiple views into a reusable UI component. They are very simple to implement:
 
@@ -58,7 +58,7 @@ This is usually your starting point. Composite views (also known as compound vie
 
 TweetCompositeViewcode 是一个composite view，继承了RelativeLayout，用tweet_composite_layout.xmlcode填充进去，暴露一个update()方法在adaptercode去刷新其状态，很简单。
 
-###Custom Composite View
+### Custom Composite View ###
 
 TweetCompositeView will likely perform fairly well in most situations. But, for sake of argument, suppose you want to reduce the number of child views and make layout traversals a bit more efficient.
 
@@ -88,7 +88,7 @@ TweetLayoutView probably doesn’t handle all possible layout combinations corre
 
 TweetLayoutView或许不需要控制所有的可能的布局混合的正确性，但是这不是完全不必要的，优化custom layout为你的特别需求时绝对可以的，这允许你为你的app写更简单且更高效的布局代码。
 
-###Flat Custom View
+### Flat Custom View ###
 
 As you can see, custom composite views are fairly simple to write using ViewGroup APIs. Most of the time, they will give you the performance your app needs.
 
@@ -136,7 +136,7 @@ The layout code in TweetElement is pretty much analogous to TweetLayoutView‘s.
 
 TweetElement中的布局代码差不多和TweetLayoutView的是类似的，它掌控了Picasso的请求，因为它不需要使用ImageVIew。
 
-###Async Custom View
+### Async Custom View ###
 
 As we all know, the Android UI framework is [_single-threaded_](http://developer.android.com/guide/components/processes-and-threads.html#Threads). And this is for a good reason: UI toolkits are not your simplest piece of code. Making them thread-safe and asynchronous would be an unworthy herculean effort.
 
@@ -170,7 +170,7 @@ Furthermore, both the preloading logic and the memory cache expiration would nee
 
 Despite these limitations, the preliminary results from async custom views look very promising. I’ll continue the explorations in this area by refining the UIElement framework and using it in other kinds of UIs. Let’s see where it goes.
 
-###Wrapping up
+### Wrapping up ###
 
 When it comes to layouts, the more custom you go, the less you’ll be able to lean on the platform’s proven components. So avoid premature optimization and only go fully custom on areas that will actually affect the perceived quality and performance of your app.
 

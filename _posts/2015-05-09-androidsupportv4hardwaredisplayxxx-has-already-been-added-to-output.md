@@ -8,7 +8,7 @@ tags: []
 {% include JB/setup %}
 
 
->Error Info:Error:Class android.support.v4.hardware.display.DisplayManagerJellybeanMr1 has already been added to output. Please remove duplicate copies.
+-  Error Info:Error:Class android.support.v4.hardware.display.DisplayManagerJellybeanMr1 has already been added to output. Please remove duplicate copies.
 Error:Class android.support.v4.hardware.display.DisplayManagerCompat has already been added to output. Please remove duplicate copies.
 Error:Class android.support.v4.hardware.display.DisplayManagerCompat has already been added to output. Please remove duplicate copies.
 

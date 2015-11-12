@@ -21,23 +21,20 @@ Swift支持Functional Programming，温习一下。
 
 我们要做的就是就是把
 
-> ["Cat", "Chicken", "fish", "Dog",
->    "Mouse", "Guinea Pig", "monkey"]
+- ["Cat", "Chicken", "fish", "Dog", "Mouse", "Guinea Pig", "monkey"]
 
 转换成一个带Index并且分好类的
 
->[
-(
-"C", [Cat, Chicken]), ("D", [Dog]), ("F", [fish]), >("G", [Guinea Pig]), ("M", [Mouse, monkey])]
+- [("C", [Cat, Chicken]), ("D", [Dog]), ("F", [fish]), >("G", [Guinea Pig]), ("M", [Mouse, monkey])]
 
 ```
-let words = ["Cat", "Chicken", "fish", "Dog",
-    "Mouse", "Guinea Pig", "monkey"]
+let words = ["Cat", "Chicken", "fish", "Dog","Mouse", "Guinea Pig", "monkey"]
 
 typealias Entry = (Character, [NSString])
 ```
 
-###把大脑的思维逻辑交给程序来做，抽象和封装不够，代码难以理解，而且变量多，容易出BUG
+### 把大脑的思维逻辑交给程序来做，抽象和封装不够，代码难以理解，而且变量多，容易出BUG ###
+
 ```
 func buildIndex(words: [NSString]) -> [Entry] {
 
@@ -82,7 +79,7 @@ func buildIndex(words: [NSString]) -> [Entry] {
 
 
 
-###方法作为参数传递，确保了程序的immutable。
+### 方法作为参数传递，确保了程序的immutable。 ###
 
 
 ```

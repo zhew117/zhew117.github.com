@@ -8,7 +8,7 @@ tags: [Code,Design]
 {% include JB/setup %}
 
 
-###Creational Design Patterns:
+### Creational Design Patterns: ###
 
 **Singleton** - Ensure that only one instance of a class is created and Provide a global access point to the object.
 
@@ -24,7 +24,7 @@ tags: [Code,Design]
 
 **Object Pool** - reuses and shares objects that are expensive to create..
 
-###Behavioral Design Patterns:
+### Behavioral Design Patterns: ###
 
 **Chain of Responsibiliy** - It avoids attaching the sender of a request to its receiver, giving this way other objects the possibility of handling the request too.
 - The objects become parts of a chain and the request is sent from one object to another across the chain until one of the objects will handle it.
@@ -46,7 +46,7 @@ tags: [Code,Design]
 
 **Visitor** - Represents an operation to be performed on the elements of an object structure / Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 
-###Structural Design Patterns:
+### Structural Design Patterns: ###
 
 **Adapter** - Convert the interface of a class into another interface clients expect. / Adapter lets classes work together, that could not otherwise because of incompatible interfaces.
 
