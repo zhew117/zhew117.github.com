@@ -2,7 +2,7 @@
 layout: post
 title: "Functional Programming Wtih Swift"
 description: ""
-category: 
+category:
 tags: []
 ---
 {% include JB/setup %}
@@ -25,7 +25,7 @@ Swift支持Functional Programming，温习一下。
 
 转换成一个带Index并且分好类的
 
-- [("C", [Cat, Chicken]), ("D", [Dog]), ("F", [fish]), >("G", [Guinea Pig]), ("M", [Mouse, monkey])]
+- [("C", [Cat, Chicken]), ("D", [Dog]), ("F", [fish]), ("G", [Guinea Pig]), ("M", [Mouse, monkey])]
 
 ```
 let words = ["Cat", "Chicken", "fish", "Dog","Mouse", "Guinea Pig", "monkey"]
@@ -40,25 +40,25 @@ func buildIndex(words: [NSString]) -> [Entry] {
 
     //result存结果
     var result = [Entry]()
-    
+
     //letters存头字母
     var letters = [Character]()
-    
+
     //把不重复的头字母大写存进去
     for word in words{
         let firstLetter = Character(word.substringToIndex(1).uppercaseString)
-    
+
         if !letters.contains(firstLetter) {
             letters.append(firstLetter)
         }
     }
-    
+
     //然后来比较所有单词的头字母和刚才得到的头字母表匹配
     for letter in letters {
         var wordsForLetter = [NSString]()
         for word in words {
             let firstLetter = Character(word.substringToIndex(1).uppercaseString)
-            
+
             if firstLetter == letter {
               //把头字母匹配的单词放wordsForLetter里
                wordsForLetter.append(word)
@@ -67,8 +67,8 @@ func buildIndex(words: [NSString]) -> [Entry] {
         //把wordsForLetter带着头字母放到结果集
         result.append((letter, wordsForLetter))
     }
-    
-    
+
+
     return result
 
 }

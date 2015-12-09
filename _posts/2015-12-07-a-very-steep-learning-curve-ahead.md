@@ -1,16 +1,8 @@
 ---
 layout: post
-title: "A very steep learning curve ahead"
+title: "React-Native Build Translate Demo"
 description: ""
-category: 
+category:
 tags: []
 ---
 {% include JB/setup %}
-
-
-A very steep learning curve ahead.
-
-
-I am going to dive to React Native
-
-God bless me.

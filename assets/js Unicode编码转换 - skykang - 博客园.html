@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0062)http://www.cnblogs.com/skykang/archive/2011/05/30/2063176.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>js Unicode编码转换 - skykang - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./js Unicode编码转换 - skykang - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./js Unicode编码转换 - skykang - 博客园_files/bundle-SimpleBlue.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/skykang/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/skykang/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/skykang/wlwmanifest.xml">
+<script src="./js Unicode编码转换 - skykang - 博客园_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'skykang', cb_enable_mathjax=false;</script>
+<script src="./js Unicode编码转换 - skykang - 博客园_files/blog-common.js" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+		
+<!--done-->
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/skykang/">王志康</a></div>
+<div class="subtitle">good programmer...</div>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li id="nav_sitehome"><a id="MyLinks1_HomeLink" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li id="nav_myhome"><a id="MyLinks1_MyHomeLink" class="menu" href="http://www.cnblogs.com/skykang/">首页</a></li>
+<li id="nav_q"><a class="menu" href="http://q.cnblogs.com/">博问</a></li>
+<li id="nav_ing"><a class="menu" href="http://home.cnblogs.com/ing/">闪存</a></li>
+<li id="nav_newpost"><a id="MyLinks1_NewPostLink" class="menu" rel="nofollow" href="http://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li id="nav_contact"><a id="MyLinks1_ContactLink" class="menu" rel="nofollow" href="http://msg.cnblogs.com/send/skykang">联系</a></li>
+<li id="nav_rss"><a id="MyLinks1_Syndication" class="menu" href="http://www.cnblogs.com/skykang/rss">订阅</a>
+<!--<a id="MyLinks1_XMLLink" class="aHeaderXML" href="http://www.cnblogs.com/skykang/rss"><img src="http://www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li id="nav_admin"><a id="MyLinks1_Admin" class="menu" rel="nofollow" href="http://i.cnblogs.com/">管理</a></li>
+</ul>
+
+		<div class="blogStats">
+			
+			
+<!--done-->
+随笔-79&nbsp;
+文章-1&nbsp;
+评论-48&nbsp;
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="./js Unicode编码转换 - skykang - 博客园_files/js Unicode编码转换 - skykang - 博客园.html">js Unicode编码转换</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><span class="note"><em><span style="color: #008000;" color="#008000">/*<br>*js Unicode编码转换<br>*/</span></em></span> <br><span class="kw"><span style="color: #0000ff;" color="#0000ff">var</span></span> decToHex = <span class="kw"><span style="color: #0000ff;" color="#0000ff">function</span></span>(str) {<br>&nbsp;&nbsp;&nbsp; <span class="kw"><span style="color: #0000ff;" color="#0000ff">var</span></span> res=[];<br>&nbsp;&nbsp;&nbsp; <span class="kw"><span style="color: #0000ff;" color="#0000ff">for</span></span>(<span class="kw"><span style="color: #0000ff;" color="#0000ff">var</span></span> i=0;i &lt; str.length;i++)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; res[i]=(<span class="str"><span style="color: #a31515;" color="#a31515">"00"</span></span>+str.charCodeAt(i).toString(16)).slice(-4);<br>&nbsp;&nbsp;&nbsp; <span class="kw"><span style="color: #0000ff;" color="#0000ff">return</span></span> <span class="str"><span style="color: #a31515;" color="#a31515">"\\u"</span></span>+res.join(<span class="str"><span style="color: #a31515;" color="#a31515">"\\u"</span></span>);<br>}<br><span class="kw"><span style="color: #0000ff;" color="#0000ff">var</span></span> hexToDec = <span class="kw"><span style="color: #0000ff;" color="#0000ff">function</span></span>(str) {<br>&nbsp;&nbsp;&nbsp; str=str.replace(/\\/g,<span class="str"><span style="color: #a31515;" color="#a31515">"%"</span></span>);<br>&nbsp;&nbsp;&nbsp; <span class="kw"><span style="color: #0000ff;" color="#0000ff">return</span></span> unescape(str);<br>}<br><span class="kw"><span style="color: #0000ff;" color="#0000ff">var</span></span> str=decToHex(<span class="str"><span style="color: #a31515;" color="#a31515">"decToHex unicode 编码转换"</span></span>);<br>alert(<span class="str"><span style="color: #a31515;" color="#a31515">"编码后："</span></span>+str+<span class="str"><span style="color: #a31515;" color="#a31515">"\n\n解码后："</span></span>+hexToDec(str));</div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/skykang/category/310259.html">JavaScript</a></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+<a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(2063176,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+<a id="green_channel_follow" onclick="c_follow();" href="javascript:void(0);">关注我</a>
+<a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a><a id="green_channel_contact" href="http://msg.cnblogs.com/send/skykang" target="_blank">联系我</a>
+<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./js Unicode编码转换 - skykang - 博客园_files/icon_weibo_24.png" alt=""></a>
+<a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./js Unicode编码转换 - skykang - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+<div id="author_profile_info" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/skykang/" target="_blank"><img src="./js Unicode编码转换 - skykang - 博客园_files/u133619.jpg" class="author_avatar" alt=""></a>
+<div id="author_profile_detail" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/skykang/">skykang</a><br>
+<a href="http://home.cnblogs.com/u/skykang/followees">关注 - 0</a><br>
+<a href="http://home.cnblogs.com/u/skykang/followers">粉丝 - 47</a>
+</div>
+</div>
+<div class="clear"></div>
+<div id="author_profile_honor"></div>
+<div id="author_profile_follow">
+    <a href="javascript:void(0);" onclick="c_follow();return false;">+加关注</a>
+</div>
+</div>
+<div id="div_digg">										
+    <div class="diggit" onclick="votePost(2063176,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">1</span>
+    </div>
+	<div class="buryit" onclick="votePost(2063176,&#39;Bury&#39;)"> 
+		<span class="burynum" id="bury_count">1</span>
+	</div>
+	<div class="clear"></div>	
+	<div class="diggword" id="digg_tips">
+    (请您对文章做出评价)
+    </div>	
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/skykang/archive/2011/05/17/2048924.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/skykang/archive/2011/05/17/2048924.html" title="发布于2011-05-17 15:17">WebClient UploadData UploadFile 用法</a><br><a href="http://www.cnblogs.com/skykang/archive/2011/06/02/2068802.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/skykang/archive/2011/06/02/2068802.html" title="发布于2011-06-02 18:40">unicode 编码在线转换工具</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2011-05-30 12:39</span> <a href="http://www.cnblogs.com/skykang/">skykang</a> 阅读(<span id="post_view_count">12255</span>) 评论(<span id="post_comment_count">3</span>)  <a href="http://i.cnblogs.com/EditPosts.aspx?postid=2063176" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/skykang/archive/2011/05/30/2063176.html#" onclick="AddToWz(2063176);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,isLogined=false,cb_blogId=71574,cb_entryId=2063176,cb_blogApp=currentBlogApp,cb_blogUserGuid='8df866e2-5761-df11-ba8f-001cf0cd104b',cb_entryCreatedDate='2011/5/30 12:39:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<!--done-->
+<div class="feedback_area_title">评论列表</div>
+<div class="feedbackNoItems"></div>
+	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/skykang/archive/2011/05/30/2063176.html#2946458" class="layer">#1楼</a><a name="2946458" id="comment_anchor_2946458"></a>  <span class="comment_date">2014-05-23 15:41</span> <a id="a_comment_author_2946458" href="http://www.cnblogs.com/pvfhv/" target="_blank">67老白干</a> <a href="http://msg.cnblogs.com/send/67%E8%80%81%E7%99%BD%E5%B9%B2" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_2946458" class="blog_comment_body">escape后replace(/%/g,'\')即可</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2946458,&#39;Digg&#39;,this)">支持(2)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2946458,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2946458_avatar" style="display:none;">http://pic.cnblogs.com/face/u263877.jpg</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/skykang/archive/2011/05/30/2063176.html#3239655" class="layer">#2楼</a><a name="3239655" id="comment_anchor_3239655"></a>  <span class="comment_date">2015-08-02 00:17</span> <a id="a_comment_author_3239655" href="http://www.cnblogs.com/Raoh/" target="_blank">大悟飞天</a> <a href="http://msg.cnblogs.com/send/%E5%A4%A7%E6%82%9F%E9%A3%9E%E5%A4%A9" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3239655" class="blog_comment_body"><a href="http://www.cnblogs.com/skykang/archive/2011/05/30/2063176.html#2946458" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,2946458);">@</a>67老白干<br>非也，escape不会对英文和部分符号进行unicode编码，比如<br>escape('what's this?')<br>结果是：what%27s%20this%3F<br>而正确的unicode编码结果是：<br>\u0077\u0068\u0061\u0074\u0027\u0073\u0020\u0074\u0068\u0069\u0073\u003f</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3239655,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3239655,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/skykang/archive/2011/05/30/2063176.html#3257229" class="layer">#3楼</a><a name="3257229" id="comment_anchor_3257229"></a><span id="comment-maxId" style="display:none;">3257229</span><span id="comment-maxDate" style="display:none;">2015/8/31 5:16:01</span>  <span class="comment_date">2015-08-31 05:16</span> <a id="a_comment_author_3257229" href="http://home.cnblogs.com/u/805077/" target="_blank">btx258</a> <a href="http://msg.cnblogs.com/send/btx258" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3257229" class="blog_comment_body">把 "00" 改成 "0000" 更严谨。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3257229,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3257229,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="http://www.cnblogs.com/skykang/archive/2011/05/30/2063176.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/skykang/archive/2011/05/30/2063176.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="site_nav_under"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://www.rongcloud.cn/" target="_blank">【推荐】融云即时通讯云－专注为 App 开发者提供IM云服务</a><br><a href="https://www.jpush.cn/" target="_blank">【推荐】极光推送30多万开发者的选择，SDK接入量超过30亿了，你还没注册？</a><br><a href="http://click.aliyun.com/m/994/" target="_blank">【精品】根据网站PV推荐完整架构方案</a><br></div>
+<div id="opt_under_post"></div>
+<script type="text/javascript">
+    fixPostBodyFormat();
+</script>
+<div id="google_ad_c1" class="c_ad_block"><a href="http://www.gcpowertools.com.cn/products/componentone.htm?utm_source=cnblogs&utm_medium=blogpage&utm_term=bottom&utm_content=C1&utm_campaign=community" target="_blank"><img width="300" height="250" src="./js Unicode编码转换 - skykang - 博客园_files/24442-20151030141701419-628671799.gif" alt="" title=""></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/534293/" target="_blank">残疾人专属机械手 可以用肌肉震动来控制</a><br> ·  <a href="http://news.cnblogs.com/n/534292/" target="_blank">TIOBE 2015年12月编程语言排行榜 Java正在经历屋顶</a><br> ·  <a href="http://news.cnblogs.com/n/534291/" target="_blank">能让iPhone 6后壳logo发光的套装已经开售</a><br> ·  <a href="http://news.cnblogs.com/n/534290/" target="_blank">时代变了，IBM正在给员工免费派发苹果Macbook</a><br> ·  <a href="http://news.cnblogs.com/n/534289/" target="_blank">开源中国今日正式挂牌，新三板首家软件众包平台</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="google_ad_c2" class="c_ad_block"><a href="http://e.jikexueyuan.com/html5.html?hmsr=cnb_banner_html5_09.14" target="_blank"><img width="468" height="60" src="./js Unicode编码转换 - skykang - 博客园_files/24442-20150914101329570-406117032.jpg" alt="" title=""></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/527814/" target="_blank">从涂鸦到发布——理解API的设计过程</a><br> ·  <a href="http://kb.cnblogs.com/page/531834/" target="_blank">好的架构是进化来的，不是设计来的</a><br> ·  <a href="http://kb.cnblogs.com/page/532236/" target="_blank">被误解的MVC和被神化的MVVM</a><br> ·  <a href="http://kb.cnblogs.com/page/530046/" target="_blank">再谈设计和编码</a><br> ·  <a href="http://kb.cnblogs.com/page/531270/" target="_blank">什么时候应该避免写代码注释？</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+$(function () {
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 200);
+});
+</script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><img src="./js Unicode编码转换 - skykang - 博客园_files/a133619.jpg">
+<br>
+英文名：Kaine.Wang
+<br>
+生　日：1984-8-11
+<br>
+主　页：<a href="http://www.cnblogs.com/skykang" target="_blank">主页</a>
+<br>
+城　市：中国·西安
+承接【网站建设、量身定做管理软件及小型应用软件开发】，专业软件设计师为您服务。<div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/skykang/">skykang</a><br>园龄：<a href="http://home.cnblogs.com/u/skykang/" title="入园时间：2010-05-17">5年6个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/skykang/followers/">47</a><br>关注：<a href="http://home.cnblogs.com/u/skykang/followees/">0</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="cnblogs.UserManager.FollowBlogger(&#39;8df866e2-5761-df11-ba8f-001cf0cd104b&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/skykang/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/skykang/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/skykang/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/skykang/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/skykang/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/skykang/tag/%E5%8F%98%E9%87%8F%20%E5%87%BD%E6%95%B0%20%E4%BD%9C%E7%94%A8%E5%9F%9F%20c%20c%E7%A8%8B%E5%BA%8F%20%E6%9D%82%E8%B0%88/">变量 函数 作用域 c c程序 杂谈</a>(1)</li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div class="catListPostCategory">
+<h3 class="catListTitle">随笔分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/skykang/category/310252.html">C# 编程(13)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/skykang/category/310251.html">Asp.Net(9)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/skykang/category/310260.html">C++(8)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/skykang/category/310253.html">CLR和.Net框架(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/skykang/category/310259.html">JavaScript(19)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/skykang/category/545668.html">安装包(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/skykang/category/310258.html">其他(13)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/skykang/category/310255.html">设计与模式</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/skykang/category/310256.html">数据结构和算法</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/skykang/category/310254.html">数据库和数据访问(3)</a> </li>
+
+</ul>
+
+</div>
+
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/skykang/archive/2014/05.html">2014年5月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/skykang/archive/2014/03.html">2014年3月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/skykang/archive/2014/01.html">2014年1月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/skykang/archive/2013/12.html">2013年12月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/skykang/archive/2013/09.html">2013年9月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/skykang/archive/2013/07.html">2013年7月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/skykang/archive/2013/05.html">2013年5月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/skykang/archive/2013/04.html">2013年4月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_8" href="http://www.cnblogs.com/skykang/archive/2013/02.html">2013年2月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_9" href="http://www.cnblogs.com/skykang/archive/2013/01.html">2013年1月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_10" href="http://www.cnblogs.com/skykang/archive/2012/12.html">2012年12月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_11" href="http://www.cnblogs.com/skykang/archive/2012/09.html">2012年9月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_12" href="http://www.cnblogs.com/skykang/archive/2011/12.html">2011年12月 (7)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_13" href="http://www.cnblogs.com/skykang/archive/2011/11.html">2011年11月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_14" href="http://www.cnblogs.com/skykang/archive/2011/08.html">2011年8月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_15" href="http://www.cnblogs.com/skykang/archive/2011/07.html">2011年7月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_16" href="http://www.cnblogs.com/skykang/archive/2011/06.html">2011年6月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_17" href="http://www.cnblogs.com/skykang/archive/2011/05.html">2011年5月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_18" href="http://www.cnblogs.com/skykang/archive/2011/04.html">2011年4月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_19" href="http://www.cnblogs.com/skykang/archive/2011/03.html">2011年3月 (8)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_20" href="http://www.cnblogs.com/skykang/archive/2011/01.html">2011年1月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_21" href="http://www.cnblogs.com/skykang/archive/2010/12.html">2010年12月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_22" href="http://www.cnblogs.com/skykang/archive/2010/11.html">2010年11月 (5)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_23" href="http://www.cnblogs.com/skykang/archive/2010/10.html">2010年10月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_24" href="http://www.cnblogs.com/skykang/archive/2010/08.html">2010年8月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_25" href="http://www.cnblogs.com/skykang/archive/2010/07.html">2010年7月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_26" href="http://www.cnblogs.com/skykang/archive/2010/06.html">2010年6月 (2)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+	<div id="RecentCommentsBlock"><ul>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/skykang/archive/2011/12/08/2281084.html#3319052">1. Re:C#中几种换行符</a></li>
+    <li class="recent_comment_body">Response.Write("arr集合中总有" + arr.Count + "个元素" + "");C#中输出用,来换行。...</li>
+    <li class="recent_comment_author">--PengWenHao</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/skykang/archive/2011/06/02/2068802.html#3315400">2. Re:unicode 编码在线转换工具</a></li>
+    <li class="recent_comment_body">您好，我想请问一下 ®转化为unicode 编码  “\u00ae” 之后，Java上不会识别，，生成的pdf也无法识别，请问是什么原因，能告知一下吗</li>
+    <li class="recent_comment_author">--火玉</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/skykang/archive/2011/08/04/2127158.html#3315142">3. Re:JS Replace 全部替换字符 用法</a></li>
+    <li class="recent_comment_body">aini</li>
+    <li class="recent_comment_author">--pandajava</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/skykang/archive/2011/06/02/2068802.html#3296984">4. Re:unicode 编码在线转换工具</a></li>
+    <li class="recent_comment_body">谢谢</li>
+    <li class="recent_comment_author">--lailaiping</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/skykang/archive/2011/03/21/1990153.html#3264667">5. Re:iisapp 查看PID所对应的IIS应用程序池及详细介绍</a></li>
+    <li class="recent_comment_body">补充一下IIS7中查看w3wp进程 在IIS中可以用iisapp命令查看到所有w3wp进程的情况，但IIS7中微软改变了做法，改用了Appcmd命令了，做法如下： 1：在system32文件夹中有......</li>
+    <li class="recent_comment_author">--James Li</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/skykang/archive/2011/06/02/2068802.html">1. unicode 编码在线转换工具(151829)</a></li><li><a href="http://www.cnblogs.com/skykang/archive/2011/08/04/2127158.html">2. JS Replace 全部替换字符 用法(41336)</a></li><li><a href="http://www.cnblogs.com/skykang/archive/2011/12/08/2281084.html">3. C#中几种换行符(20835)</a></li><li><a href="http://www.cnblogs.com/skykang/archive/2010/06/04/1751261.html">4. js父页面操作的父子页面传值(12840)</a></li><li><a href="./js Unicode编码转换 - skykang - 博客园_files/js Unicode编码转换 - skykang - 博客园.html">5. js Unicode编码转换(12255)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/skykang/archive/2011/06/02/2068802.html">1. unicode 编码在线转换工具(12)</a></li><li><a href="http://www.cnblogs.com/skykang/archive/2010/06/24/1764401.html">2. C#实现.NET通用JSON解析/构建类(4)</a></li><li><a href="http://www.cnblogs.com/skykang/archive/2011/07/21/2112685.html">3. 动态加载script文件 专题(4)</a></li><li><a href="http://www.cnblogs.com/skykang/archive/2011/01/10/1931962.html">4. NVelocity用法 Net版(完全整理)(3)</a></li><li><a href="./js Unicode编码转换 - skykang - 博客园_files/js Unicode编码转换 - skykang - 博客园.html">5. js Unicode编码转换(3)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/skykang/archive/2011/06/02/2068802.html">1. unicode 编码在线转换工具(7)</a></li><li><a href="http://www.cnblogs.com/skykang/archive/2010/10/13/1849970.html">2. LitJSON--json 和net 的完美组合用法(5)</a></li><li><a href="http://www.cnblogs.com/skykang/archive/2011/12/08/2281084.html">3. C#中几种换行符(2)</a></li><li><a href="http://www.cnblogs.com/skykang/archive/2011/03/03/1970194.html">4. C#教程:关于匿名类型的特性(2)</a></li><li><a href="http://www.cnblogs.com/skykang/archive/2011/01/10/1931962.html">5. NVelocity用法 Net版(完全整理)(2)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2015 skykang
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+</body><div></div><div></div></html>
